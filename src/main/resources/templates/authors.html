@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+
+    <title>Authors</title>
+</head>
+<body>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(authors)}">
+        <h2>List of Products</h2>
+        <table class="table table-striped" >
+            <tr>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+
+
+            </tr>
+            <tr th:each="author : ${authors}">
+                <td th:text="${author.id}">123</td>
+                <td th:text="${author.firstName}">123</td>
+                <td th:text="${author.lastName}">Sring in Action</td>
+
+
+
+            </tr>
+
+        </table>
+
+
+    </div>
+</div>
+</body>
+</html>
