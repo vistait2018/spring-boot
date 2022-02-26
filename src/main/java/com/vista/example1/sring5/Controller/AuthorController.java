@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AuthorController {
     @Autowired
     private AuthorRepo authorRepo;
+    public String hello(){
+        return "Hello";
+    }
     @RequestMapping("/authors")
     public String getAuthors(Model model){
         model.addAttribute("authors", authorRepo.findAll() );
